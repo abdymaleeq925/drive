@@ -39,21 +39,19 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
             ),
             className: "error-toast",
           });
-          return null;
         }
-        // return uploadFile({ file, ownerId, accountId, path }).then(
-        //   (uploadedFile) => {
-        //     if (uploadedFile) {
-        //       setFiles((prevFiles) =>
-        //         prevFiles.filter((f) => f.name !== file.name),
-        //       );
-        //     }
-        //     return uploadedFile;
-        //   },
-        // );
+        return uploadFile({ file, ownerId, accountId, path }).then(
+          (uploadedFile) => {
+            if (uploadedFile) {
+              setFiles((prevFiles) =>
+                prevFiles.filter((f) => f.name !== file.name),
+              );
+            }
+            return uploadedFile;
+          },
+        );
       });
-      const uploadedFiles = await Promise.all(uploadPromises);
-      // const successfulUploads = uploadedFiles.filter(Boolean);
+      await Promise.all(uploadPromises);
     },
     [ownerId, accountId, path],
   );
@@ -92,7 +90,6 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
           <h4 className="h4 text-light-100">Uploading</h4>
           {files.map((file, index) => {
             const { type, extension } = getFileType(file.name);
-            console.log("file", file);
             return (
               <li
                 key={`${file.name}-${index}`}
