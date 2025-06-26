@@ -1,7 +1,7 @@
 import { getFiles, getTotalSpaceUsed } from "@/lib/actions/file.actions";
 import { convertFileSize, getUsageSummary } from "@/lib/utils";
 import Image from "next/image";
-import { Chart } from "./Chart";
+import { Chart } from "../../components/Chart";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import FormattedDateTime from "@/components/FormattedDateTime";
