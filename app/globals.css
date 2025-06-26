@@ -308,7 +308,7 @@
 
   /* FileUploader */
   .uploader-button {
-    @apply primary-btn h-[52px] gap-2 px-10 shadow-drop-1 !important;
+    @apply primary-btn h-[52px] gap-2 px-10 shadow-drop-1 text-white !important;
   }
   .uploader-preview-list {
     @apply fixed bottom-10 right-10 z-50 flex size-full h-fit max-w-[480px] flex-col gap-3 rounded-[20px] bg-white p-7 shadow-drop-3 !important;
@@ -385,7 +385,7 @@
     @apply remove-scrollbar hidden h-screen w-[90px] flex-col overflow-auto px-5 py-7 sm:flex lg:w-[280px] xl:w-[325px] !important;
   }
   .sidebar-nav {
-    @apply h5 mt-9 flex-1 gap-1 text-brand !important;
+    @apply h5 mt-6 flex-1 gap-1 text-brand !important;
   }
   .sidebar-nav-item {
     @apply flex text-light-100 gap-4 rounded-xl lg:w-full justify-center lg:justify-start items-center h5 lg:px-[30px] h-[52px] lg:rounded-full !important;
@@ -407,6 +407,7 @@
   }
   .sort-select-content {
     @apply !shadow-drop-3 !important;
+    @apply bg-white !important;
   }
 
   /* Thumbnail */

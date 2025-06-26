@@ -38,6 +38,7 @@ const MobileNavigation = ({
     <header className="mobile-header">
       <Image
         src="/assets/icons/logo-full-brand.svg"
+        priority
         alt="logo"
         width={120}
         height={52}

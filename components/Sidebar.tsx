@@ -19,6 +19,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
       <Link href="/">
         <Image
           src="/assets/icons/logo-full-brand.svg"
+          priority
           alt="logo"
           width={160}
           height={50}
@@ -26,7 +27,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
         />{" "}
       </Link>
       <nav className="sidebar-nav">
-        <ul className="flex flex-1 flex-col gap-6">
+        <ul className="flex flex-1 flex-col gap-4">
           {navItems.map(({ url, name, icon }) => (
             <Link href={url} key={url} className="lg:w-full">
               <li
